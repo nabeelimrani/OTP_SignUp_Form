@@ -124,6 +124,7 @@
                             });
                             $('#showbtn').removeClass('d-none');
                             $('#verifyEmail').addClass('d-none');
+                            $('#resendOTP').prop('disabled', false);
 
                         },
                         error: function(xhr) {
@@ -168,7 +169,7 @@
                         $('#email').attr('readonly', true);
                         $('#showbtn').addClass('d-none');
                         $('#verifyEmail').removeClass('d-none');
-                        $('#resendOTP').prop('disabled', false);
+
 
 
 

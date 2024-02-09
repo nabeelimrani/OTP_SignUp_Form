@@ -18,7 +18,7 @@ class UserController extends Controller
 
         // Check if email or phone verification sessions were never initiated
         if (!session()->has('isEmailVerified')) {
-            return response()->json(['message' => 'Please verify both <strong>EMAIL</strong> before creating the user.'], 400);
+            return response()->json(['message' => 'Please verify <strong>EMAIL</strong> before creating the user.'], 400);
         }
 
         // Check if email verification has expired
@@ -68,7 +68,7 @@ class UserController extends Controller
             return response()->json(['message' => 'Invalid email address.'], 422);
         }
 
-        $otp = rand(100000, 999999);
+        $otp = rand(10000, 99999);
         // Save $otp to your database associated with the email for verification here
         // Store OTP in the Laravel session
         Session::put('email_otp', $otp);
