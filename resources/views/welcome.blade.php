@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <style>
+        @media(prefers-color-scheme:light) {
+            body {
+                background-color: white;
+            }
+            h2{
+                color: white;
+            }
+            .card{
+                color: white
+            }
+        }
+        @media(prefers-color-scheme:dark) {
+            body {
+                background-color: rgb(0, 0, 0);
+            }
+            h2{
+                color: rgb(0, 0, 0);
+            }
+            .card{
+                color: rgb(0, 0, 0)
+            }
+        }
+    </style>
 </head>
 
 <body>
