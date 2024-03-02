@@ -5,31 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>One-Time Password (OTP) Registration Form</title>
+    @include('meta::manager', [
+        'title' => 'One-Time Password (OTP) Registration Form - Secure Your Account',
+        'description' =>
+            'Register securely using our One-Time Password (OTP) system. Ensure your account is protected with the latest in security technology.',
+        'image' => asset('favicon/otp.png'), // Update the image path accordingly
+        'keywords' => 'OTP, One-Time Password, Secure Registration, Account Security, Laravel',
+        'author' => 'Your Company or Your Name',
+        'url' => url()->current(),
+        'canonical' => url()->current(),
+        'robots' => 'index, follow',
+        'og_type' => 'website',
+        'og_title' => 'One-Time Password (OTP) Registration Form - Secure Your Account',
+        'og_description' =>
+            'Register securely using our One-Time Password (OTP) system. Ensure your account is protected with the latest in security technology.',
+        'og_image' => asset('favicon/otp.png'), // Repeat the image path here for social media
+        'og_url' => url()->current(),
+        'og_site_name' => 'Your Site Name',
+        'og_locale' => 'en_US',
+        'twitter_card' => 'summary_large_image',
+        'twitter_creator' => '@YourTwitterHandle', // Your or your company's Twitter handle
+        'twitter_title' => 'One-Time Password (OTP) Registration Form - Secure Your Account',
+        'twitter_description' =>
+            'Register securely using our One-Time Password (OTP) system. Ensure your account is protected with the latest in security technology.',
+        'twitter_image' => asset('favicon/otp.png'), // Repeat the image path here for Twitter cards
+        'favicon' => asset('favicon/favicon.ico'), // Assuming the favicon is in the public/favicon directory
+        // Additional meta tags
+        'viewport' => 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        'charset' => 'utf-8',
+        // Social media specific tags could be added here as well
+        // Custom tags for additional needs can be included too
+    ])
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="icon" href="{{ asset('favicon/otp.png') }}">
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <style>
         @media(prefers-color-scheme:light) {
             body {
                 background-color: white;
             }
-            h2{
+
+            h2 {
                 color: white;
             }
-            .card{
+
+            .card {
                 color: white
             }
         }
+
         @media(prefers-color-scheme:dark) {
             body {
                 background-color: rgb(0, 0, 0);
             }
-            h2{
+
+            h2 {
                 color: rgb(0, 0, 0);
             }
-            .card{
+
+            .card {
                 color: rgb(0, 0, 0)
             }
         }
